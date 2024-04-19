@@ -1,0 +1,55 @@
+CREATE SEQUENCE custid 
+			INCREMENT BY  1
+			START WITH  1
+			MAXVALUE  1000
+			NOCACHE
+			NOCYCLE;
+
+CREATE SEQUENCE orderid 
+			INCREMENT BY  1
+			START WITH  1
+			MAXVALUE  1000
+			NOCACHE
+			NOCYCLE;
+
+CREATE SEQUENCE itemid 
+			INCREMENT BY  1
+			START WITH  1
+			MAXVALUE  1000         
+			NOCACHE
+			NOCYCLE;
+
+create table Customer(cid varchar2(20) PRIMARY KEY, cname varchar2(40) NOT NULL, email varchar2(40) UNIQUE, pass varchar2(20) NOT NULL);
+
+
+create table Menu(
+mid varchar2(10) Primary Key,
+item_name varchar2(20) unique,
+price int
+);
+
+create table OrderTable(
+oid varchar2(20) Primary Key,
+price int,
+net_quantity int,
+status varchar2(20)
+);
+
+create table OrderList(
+item varchar2(20),
+quantity int,
+id varchar2(20) REFERENCES OrderTable (oid)
+);
+
+create table AdminCafeteria(aid varchar2(20) PRIMARY KEY, email varchar2(40) UNIQUE, pass varchar2(20) NOT NULL);
+
+	INSERT INTO AdminCafeteria (aid, email, pass)
+	VALUES ('admin', 'admin@gmail.com', 'admin123');
+
+
+create table cart (
+itmeid varchar2(20) references menu (mid),
+quantity int,
+price int,
+custid varchar2(20) references customer (cid)
+)
