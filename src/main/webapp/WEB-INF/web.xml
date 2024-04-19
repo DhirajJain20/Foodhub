@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Cafeteria</display-name>
+
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>CustomerProfile.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CustomerRegistrationSV</display-name>
+    <servlet-name>CustomerRegistrationSV</servlet-name>
+    <servlet-class>controller.CustomerRegistrationSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerRegistrationSV</servlet-name>
+    <url-pattern>/CustomerRegistrationSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CustomerSignInSV</display-name>
+    <servlet-name>CustomerSignInSV</servlet-name>
+    <servlet-class>controller.CustomerSignInSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerSignInSV</servlet-name>
+    <url-pattern>/CustomerSignInSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutSV</display-name>
+    <servlet-name>LogoutSV</servlet-name>
+    <servlet-class>controller.LogoutSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutSV</servlet-name>
+    <url-pattern>/LogoutSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminSignInSV</display-name>
+    <servlet-name>AdminSignInSV</servlet-name>
+    <servlet-class>controller.AdminSignInSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminSignInSV</servlet-name>
+    <url-pattern>/AdminSignInSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddMenuSV</display-name>
+    <servlet-name>AddMenuSV</servlet-name>
+    <servlet-class>controller.AddMenuSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddMenuSV</servlet-name>
+    <url-pattern>/AddMenuSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminSV</display-name>
+    <servlet-name>AdminSV</servlet-name>
+    <servlet-class>controller.AdminSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminSV</servlet-name>
+    <url-pattern>/AdminSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CustomerMenu</display-name>
+    <servlet-name>CustomerMenu</servlet-name>
+    <servlet-class>controller.CustomerMenu</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerMenu</servlet-name>
+    <url-pattern>/CustomerMenu</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CartSV</display-name>
+    <servlet-name>CartSV</servlet-name>
+    <servlet-class>controller.CartSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartSV</servlet-name>
+    <url-pattern>/CartSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OrderCompleteSV</display-name>
+    <servlet-name>OrderCompleteSV</servlet-name>
+    <servlet-class>controller.OrderCompleteSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderCompleteSV</servlet-name>
+    <url-pattern>/OrderCompleteSV</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStatusSV</display-name>
+    <servlet-name>UpdateStatusSV</servlet-name>
+    <servlet-class>controller.UpdateStatusSV</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStatusSV</servlet-name>
+    <url-pattern>/UpdateStatusSV</url-pattern>
+  </servlet-mapping>
+  
+  	<session-config>
+        <session-timeout>30</session-timeout> <!-- Set your desired session timeout in minutes -->
+    </session-config>
+    
+
+  
+</web-app>
